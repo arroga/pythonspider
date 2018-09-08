@@ -9,6 +9,6 @@ import scrapy
 
 
 class ClItem(scrapy.Item):
-    picture=scrapy.Field()
+    picture=scrapy.Field() #抓取目标
     url=scrapy.Field()
     title=scrapy.Field()

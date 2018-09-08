@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'cl.pipelines.ClPipeline': 300,
+    'cl.pipelines.ClPipeline': 300, #管道激活
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -93,9 +93,9 @@ DEFAULT_REQUEST_HEADERS = {
    'Accept-Language': 'en',
    'USER_AGENT':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
 }
-IPPOOL=[{"ipaddr": "172.247.33.207:1080"}]
+IPPOOL=[{"ipaddr": "172.247.33.207:1080"}]#代理地址
 DOWNLOADER_MIDDLEWARES = {
 #    'myproxies.middlewares.MyCustomDownloaderMiddleware': 543,
-     'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware':543,
+     'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware':543,#代理
      'cl.middlewares.ClSpiderMiddleware':125
 }
